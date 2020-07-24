@@ -1,4 +1,3 @@
-* Database initialization
 # chat-space　DB設計
 
 ## messagesテーブル
