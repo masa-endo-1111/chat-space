@@ -1,0 +1,16 @@
+.Side-bar
+  .Side-header
+    .Side-header__box
+      .Side-header__box__user-name masa
+      .Side-header__box__icons
+        = link_to "#" do 
+          = icon('far', 'edit', class: "Side-header__box__icons--edit-icon")
+        = link_to "#" do 
+          = icon('fas', 'cog', class: "Side-header__box__icons--cog-icon")
+  .Side-groups
+    .Side-groups__box
+      %p.Side-groups__box__group-name グループ名
+      %p.Side-groups__box__message まだメッセージがありません
+    .Side-groups__box
+      %p.Side-groups__box__group-name グループ名
+      %p.Side-groups__box__message まだメッセージがありません
