@@ -1,0 +1,29 @@
+.Chat-main
+  .Main-header
+    .Main-header__left-box
+      %p.Main-header__left-box__group-name グループ名
+      %ul.Main-header__left-box__member-list
+        %li.Main-header__left-box__member Member:
+        %li.Main-header__left-box__member masa
+        %li.Main-header__left-box__member endo
+    = link_to "#", class: "Main-header--edit-btn" do
+      Edit
+  .Messages
+    .Message-box
+      .Message-box__info
+        .Message-box__info__name name
+        .Message-box__info__time 2020/7/28
+      .Message-box__message chatspace実装中
+    .Message-box
+      .Message-box__info
+        .Message-box__info__name name
+        .Message-box__info__time 2020/7/28
+      .Message-box__message chatspace実装中
+  .Main-fotter
+    %form.Form-box
+      .Form-box__content
+        %input.Form-box__content__text{"type": "text", "placeholder": "type a message"}
+        %label.Form-box__content__image
+          = icon('fas', 'image')
+          %input.Form-box__content__image__file{type: "file"}
+      %input.Form-box__btn{"type": "submit", "value": "Send", "name": "#"}
