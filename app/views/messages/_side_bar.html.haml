@@ -4,14 +4,15 @@
       .Side-header__box__user-name
         = current_user.name
       .Side-header__box__icons
-        = link_to "#" do 
+        = link_to new_group_path do 
           = icon('far', 'edit', class: "Side-header__box__icons--edit-icon")
         = link_to edit_user_path(current_user) do 
           = icon('fas', 'cog', class: "Side-header__box__icons--cog-icon")
   .Side-groups
-    .Side-groups__box
-      %p.Side-groups__box__group-name グループ名
-      %p.Side-groups__box__message まだメッセージがありません
-    .Side-groups__box
-      %p.Side-groups__box__group-name グループ名
-      %p.Side-groups__box__message まだメッセージがありません
+    - current_user.groups.each do |group|
+      .Side-groups__box
+        = link_to '#' do
+          .Side-groups__box__group-name
+            = group.name
+          .Side-groups__box__message 
+            まだメッセージがありません
