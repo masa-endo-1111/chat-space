@@ -4,10 +4,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|------|
+|string|string|------|
 |image|string|------|
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :group
@@ -18,7 +18,7 @@
 |------|----|-------|
 |name|string|null: false|
 |email|string|null: false|
-|password|string|null: false|
+|encrypted_password|string|null: false|
 ### Association
 - has_many :messages
 - has_many :groups, through: :groups_users
@@ -38,8 +38,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
 - belongs_to :user
